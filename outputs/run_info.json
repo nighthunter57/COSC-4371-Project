@@ -1,45 +1,45 @@
 {
-  "threshold": 0.0416,
+  "threshold": 0.0384,
   "threshold_rule": "lowest 4-decimal threshold with validation FPR <= 0.05 (score >= threshold is positive)",
   "chosen_C": 16.0,
   "validation_grid": [
     {
       "C": 0.25,
-      "threshold": 0.2161,
-      "val_recall": 0.9869565217391304,
-      "val_fpr": 0.049102927289896126,
-      "val_auroc": 0.9984070287802274
+      "threshold": 0.2276,
+      "val_recall": 0.9956521739130435,
+      "val_fpr": 0.04914933837429111,
+      "val_auroc": 0.9993609764116052
     },
     {
       "C": 1.0,
-      "threshold": 0.1358,
-      "val_recall": 0.9934782608695653,
-      "val_fpr": 0.049102927289896126,
-      "val_auroc": 0.9987477932421891
+      "threshold": 0.1426,
+      "val_recall": 0.9956521739130435,
+      "val_fpr": 0.04914933837429111,
+      "val_auroc": 0.9993979616996795
     },
     {
       "C": 4.0,
-      "threshold": 0.0723,
-      "val_recall": 0.9934782608695653,
-      "val_fpr": 0.049102927289896126,
-      "val_auroc": 0.9989571786344787
+      "threshold": 0.0813,
+      "val_recall": 0.9956521739130435,
+      "val_fpr": 0.04914933837429111,
+      "val_auroc": 0.9994513848935647
     },
     {
       "C": 16.0,
-      "threshold": 0.0416,
-      "val_recall": 0.9956521739130435,
-      "val_fpr": 0.049102927289896126,
-      "val_auroc": 0.9988483803424066
+      "threshold": 0.0384,
+      "val_recall": 0.9978260869565218,
+      "val_fpr": 0.04914933837429111,
+      "val_auroc": 0.9994986438727707
     }
   ],
   "features": {
     "word": "TF-IDF word 1-2 grams, min_df 2, sublinear tf, lowercase",
     "char": "TF-IDF char_wb 3-5 grams, min_df 2, sublinear tf, lowercase",
-    "n_features": 145849
+    "n_features": 141544
   },
   "classifier": "LogisticRegression(class_weight='balanced', max_iter=5000, lbfgs)",
-  "fit_seconds_all_C": 7.5,
-  "total_seconds": 77.5,
+  "fit_seconds_all_C": 7.2,
+  "total_seconds": 71.8,
   "hardware": "arm64 CPU, macOS-26.7.1-arm64-arm-64bit-Mach-O",
   "python": "3.14.7",
   "packages": {
@@ -55,6 +55,6 @@
   },
   "figure_operating_point": {
     "recall": 0.9978213507625272,
-    "precision": 0.9087301587301587
+    "precision": 0.906930693069307
   }
 }

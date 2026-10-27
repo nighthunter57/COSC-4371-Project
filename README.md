@@ -2,7 +2,12 @@
 
 Huynh Anh Hao Pham | COSC 4371 Security Analytics | Fall 2026
 
-## Proposal
+> **Status.** The project now follows the assigned language variant. The original
+> proposal is kept below as a historical record. Its obfuscation and normalization plan
+> and its 80/20 split were replaced; see [Current experiment](#current-experiment) for
+> what the code actually does.
+
+## Original proposal (historical, as submitted)
 
 ### 1. Security question
 
@@ -93,6 +98,38 @@ Results for deepset will be reported overall and separately for English and Germ
 
 Project assignment: your project is approved as a variant of Project 15. What varies: the language of the test prompt. Machine-translate the Safe-Guard and Gandalf test injections into German and French, and use deepset's native German prompts (the 40% your audit found) as the check on translation. What stays fixed: you train on English Safe-Guard. Your main table shows the score by language, with translated German next to native German.
 
+## Current experiment
+
+**Question.** How well does a prompt-injection detector trained on English Safe-Guard
+prompts detect injections written in German and French, and how do results on
+machine-translated German compare with results on native German prompts?
+
+**Variable:** the language of the test prompt (English, machine-translated German,
+native German, machine-translated French). **Fixed:** the English Safe-Guard training
+split, the classifier, and the threshold rule.
+
+**Language review.** langdetect mislabels many short English prompts, so it is not used
+to choose rows. `language_review.py` flags every prompt that might not be English, and
+each flagged prompt was checked by hand. Deepset prompts are labeled English, German,
+mixed (English and German in one prompt), or other. The labels and the reason for every
+manual decision are in `language_review.csv`.
+
+**Split.**
+1. Safe-Guard, the only training source: drop the 11 prompts that are not English, then
+   the 5 rows in label-conflict groups, then 156 extra copies of exact duplicates, then
+   13 prompts that match a deepset or Gandalf prompt (exact, normalized, or character
+   n-gram cosine >= 0.9). That leaves 10,111 rows.
+2. Group Safe-Guard near-duplicates (same normalized text, or character n-gram cosine
+   >= 0.9) and split 70/15/15 into train, validation and test with
+   `StratifiedGroupKFold` (20 folds, seed 4371; folds 0-2 test, 3-5 validation). No
+   group crosses a split.
+3. Test sets: Safe-Guard test (English), the 994 English Gandalf prompts, and deepset
+   split into English, native German, mixed, and other-language prompts. All deepset
+   rows are test rows.
+
+The threshold is chosen on Safe-Guard validation only: the lowest 4-decimal threshold
+with a false-positive rate of at most 5%.
+
 ## Running the code
 
 ```bash
@@ -101,7 +138,8 @@ python3 -m venv .venv
 .venv/bin/python run_baseline.py
 ```
 
-`run_baseline.py` downloads the three datasets from Hugging Face at the pinned revisions below into `data/`, which is not committed. It then audits the data, builds the split, trains the TF-IDF with logistic regression baseline, and writes `split.csv` and `scores.csv`. A second run writes byte-identical files.
+`language_review.py` rebuilds `language_review.csv` from the flags and the recorded
+manual decisions; you only need it if you change the review. `run_baseline.py` downloads the three datasets from Hugging Face at the pinned revisions below into `data/`, which is not committed. It then audits the data, builds the split, trains the TF-IDF with logistic regression baseline, and writes `split.csv` and `scores.csv`. A second run writes byte-identical files.
 
 | Dataset | Revision |
 |---|---|
@@ -112,12 +150,13 @@ python3 -m venv .venv
 To check the outputs, download `check_checkpoint.py` from Canvas into this folder and run:
 
 ```bash
-.venv/bin/python check_checkpoint.py --split split.csv --scores scores.csv --threshold 0.0416
+.venv/bin/python check_checkpoint.py --split split.csv --scores scores.csv --threshold 0.0384
 ```
 
 | Output | Contents |
 |---|---|
-| `split.csv` | Every kept row: row_id, dataset, split, label, lang, orig_split, near_dup_group |
+| `language_review.csv` | Reviewed language for every non-English Safe-Guard or Gandalf prompt and every deepset prompt, with the reason for manual decisions |
+| `split.csv` | Every kept row: row_id, dataset, split, label, lang (reviewed), langdetect, orig_split, near_dup_group |
 | `scores.csv` | Every test row: row_id, test_set, label, score |
 | `outputs/audit.json` | Audit numbers |
 | `outputs/split_log.json` | Rows removed at each step, and leakage counts |

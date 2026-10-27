@@ -1,0 +1,680 @@
+row_id,dataset,language,method,note
+safeguard:test:1087,safeguard,other,manual,translation task containing Chinese text
+safeguard:train:1964,safeguard,other,manual,asks to translate a French tweet; contains the French text
+safeguard:train:2619,safeguard,other,manual,translation task containing a Russian sentence
+safeguard:train:2835,safeguard,other,manual,rewrite task containing Russian text
+safeguard:train:2893,safeguard,other,manual,English jailbreak with several Italian sentences
+safeguard:train:3028,safeguard,other,manual,English jailbreak with several Italian sentences
+safeguard:train:3185,safeguard,other,manual,language-identification task containing Chinese text
+safeguard:train:3626,safeguard,other,manual,product review written in Spanish
+safeguard:train:4009,safeguard,other,manual,asks to translate a French headline; contains the French text
+safeguard:train:4232,safeguard,other,manual,asks to translate an Arabic headline; contains the Arabic text
+safeguard:train:7900,safeguard,de,manual,jailbreak written entirely in German
+deepset:test:0,deepset,en,rule,
+deepset:test:1,deepset,en,manual,English; langdetect said Italian
+deepset:test:2,deepset,en,manual,short English prompt; rule unsure
+deepset:test:3,deepset,en,rule,
+deepset:test:4,deepset,en,rule,
+deepset:test:5,deepset,en,rule,
+deepset:test:6,deepset,en,rule,
+deepset:test:7,deepset,en,rule,
+deepset:test:8,deepset,en,rule,
+deepset:test:9,deepset,en,manual,short English prompt; rule unsure
+deepset:test:10,deepset,en,manual,short English prompt; rule unsure
+deepset:test:11,deepset,en,rule,
+deepset:test:12,deepset,en,rule,
+deepset:test:13,deepset,en,rule,
+deepset:test:14,deepset,en,rule,
+deepset:test:15,deepset,en,rule,
+deepset:test:16,deepset,en,rule,
+deepset:test:17,deepset,en,rule,
+deepset:test:18,deepset,en,manual,short English prompt; rule unsure
+deepset:test:19,deepset,en,manual,short English prompt; rule unsure
+deepset:test:20,deepset,en,rule,
+deepset:test:21,deepset,en,manual,short English prompt; rule unsure
+deepset:test:22,deepset,en,rule,
+deepset:test:23,deepset,en,rule,
+deepset:test:24,deepset,en,rule,
+deepset:test:25,deepset,en,manual,short English prompt; rule unsure
+deepset:test:26,deepset,en,manual,short English prompt; rule unsure
+deepset:test:27,deepset,en,rule,
+deepset:test:28,deepset,en,manual,short English prompt; rule unsure
+deepset:test:29,deepset,en,rule,
+deepset:test:30,deepset,en,rule,
+deepset:test:31,deepset,en,rule,
+deepset:test:32,deepset,en,rule,
+deepset:test:33,deepset,en,rule,
+deepset:test:34,deepset,en,rule,
+deepset:test:35,deepset,en,rule,
+deepset:test:36,deepset,en,rule,
+deepset:test:37,deepset,de,rule,
+deepset:test:38,deepset,de,rule,
+deepset:test:39,deepset,de,manual,short German prompt; rule unsure
+deepset:test:40,deepset,de,rule,
+deepset:test:41,deepset,de,rule,
+deepset:test:42,deepset,de,rule,
+deepset:test:43,deepset,de,rule,
+deepset:test:44,deepset,de,rule,
+deepset:test:45,deepset,de,rule,
+deepset:test:46,deepset,de,manual,short German prompt; rule unsure
+deepset:test:47,deepset,de,manual,short German prompt; rule unsure
+deepset:test:48,deepset,de,manual,short German prompt; rule unsure
+deepset:test:49,deepset,de,rule,
+deepset:test:50,deepset,de,rule,
+deepset:test:51,deepset,de,rule,
+deepset:test:52,deepset,de,rule,
+deepset:test:53,deepset,de,rule,
+deepset:test:54,deepset,de,rule,
+deepset:test:55,deepset,de,manual,short German prompt; rule unsure
+deepset:test:56,deepset,de,manual,short German prompt; rule unsure
+deepset:test:57,deepset,de,rule,
+deepset:test:58,deepset,de,manual,short German prompt; rule unsure
+deepset:test:59,deepset,de,rule,
+deepset:test:60,deepset,de,rule,
+deepset:test:61,deepset,de,rule,
+deepset:test:62,deepset,de,manual,short German prompt; rule unsure
+deepset:test:63,deepset,de,manual,short German prompt; rule unsure
+deepset:test:64,deepset,de,rule,
+deepset:test:65,deepset,de,rule,
+deepset:test:66,deepset,de,rule,
+deepset:test:67,deepset,de,rule,
+deepset:test:68,deepset,de,rule,
+deepset:test:69,deepset,de,rule,
+deepset:test:70,deepset,de,rule,
+deepset:test:71,deepset,de,rule,
+deepset:test:72,deepset,de,rule,
+deepset:test:73,deepset,de,rule,
+deepset:test:74,deepset,en,rule,
+deepset:test:75,deepset,en,manual,short English prompt; rule unsure
+deepset:test:76,deepset,en,manual,English; langdetect said Dutch
+deepset:test:77,deepset,en,rule,
+deepset:test:78,deepset,en,rule,
+deepset:test:79,deepset,en,rule,
+deepset:test:80,deepset,other,manual,Spanish
+deepset:test:81,deepset,en,rule,
+deepset:test:82,deepset,en,rule,
+deepset:test:83,deepset,de,rule,
+deepset:test:84,deepset,de,rule,
+deepset:test:85,deepset,en,rule,
+deepset:test:86,deepset,en,rule,
+deepset:test:87,deepset,en,manual,English with one German word
+deepset:test:88,deepset,en,rule,
+deepset:test:89,deepset,other,manual,Spanish
+deepset:test:90,deepset,en,rule,
+deepset:test:91,deepset,de,rule,
+deepset:test:92,deepset,en,rule,
+deepset:test:93,deepset,de,rule,
+deepset:test:94,deepset,en,rule,
+deepset:test:95,deepset,en,rule,
+deepset:test:96,deepset,en,rule,
+deepset:test:97,deepset,en,rule,
+deepset:test:98,deepset,en,rule,
+deepset:test:99,deepset,de,rule,
+deepset:test:100,deepset,en,rule,
+deepset:test:101,deepset,en,rule,
+deepset:test:102,deepset,en,rule,
+deepset:test:103,deepset,de,rule,
+deepset:test:104,deepset,mixed,rule,
+deepset:test:105,deepset,en,rule,
+deepset:test:106,deepset,mixed,rule,
+deepset:test:107,deepset,mixed,manual,German keywords followed by English
+deepset:test:108,deepset,de,rule,
+deepset:test:109,deepset,mixed,rule,
+deepset:test:110,deepset,en,rule,
+deepset:test:111,deepset,en,rule,
+deepset:test:112,deepset,mixed,rule,
+deepset:test:113,deepset,de,rule,
+deepset:test:114,deepset,mixed,rule,
+deepset:test:115,deepset,mixed,rule,
+deepset:train:0,deepset,en,manual,short English prompt; rule unsure
+deepset:train:1,deepset,en,rule,
+deepset:train:2,deepset,en,rule,
+deepset:train:3,deepset,en,rule,
+deepset:train:4,deepset,en,rule,
+deepset:train:5,deepset,en,rule,
+deepset:train:6,deepset,en,rule,
+deepset:train:7,deepset,en,rule,
+deepset:train:8,deepset,en,rule,
+deepset:train:9,deepset,en,manual,short English prompt; rule unsure
+deepset:train:10,deepset,en,rule,
+deepset:train:11,deepset,en,rule,
+deepset:train:12,deepset,en,manual,short English prompt; rule unsure
+deepset:train:13,deepset,en,manual,short English prompt; rule unsure
+deepset:train:14,deepset,en,rule,
+deepset:train:15,deepset,en,manual,short English prompt; rule unsure
+deepset:train:16,deepset,en,manual,short English prompt; rule unsure
+deepset:train:17,deepset,en,rule,
+deepset:train:18,deepset,en,rule,
+deepset:train:19,deepset,en,rule,
+deepset:train:20,deepset,en,rule,
+deepset:train:21,deepset,en,rule,
+deepset:train:22,deepset,en,rule,
+deepset:train:23,deepset,en,manual,short English prompt; rule unsure
+deepset:train:24,deepset,en,rule,
+deepset:train:25,deepset,en,manual,short English prompt; rule unsure
+deepset:train:26,deepset,en,rule,
+deepset:train:27,deepset,en,rule,
+deepset:train:28,deepset,en,manual,short English prompt; rule unsure
+deepset:train:29,deepset,en,rule,
+deepset:train:30,deepset,en,manual,short English prompt; rule unsure
+deepset:train:31,deepset,en,rule,
+deepset:train:32,deepset,en,rule,
+deepset:train:33,deepset,en,rule,
+deepset:train:34,deepset,en,manual,short English prompt; rule unsure
+deepset:train:35,deepset,en,rule,
+deepset:train:36,deepset,en,rule,
+deepset:train:37,deepset,en,rule,
+deepset:train:38,deepset,en,rule,
+deepset:train:39,deepset,en,rule,
+deepset:train:40,deepset,en,manual,short English prompt; rule unsure
+deepset:train:41,deepset,en,rule,
+deepset:train:42,deepset,en,rule,
+deepset:train:43,deepset,en,rule,
+deepset:train:44,deepset,en,rule,
+deepset:train:45,deepset,en,rule,
+deepset:train:46,deepset,en,manual,short English prompt; rule unsure
+deepset:train:47,deepset,en,rule,
+deepset:train:48,deepset,en,rule,
+deepset:train:49,deepset,en,rule,
+deepset:train:50,deepset,en,manual,short English prompt; rule unsure
+deepset:train:51,deepset,en,rule,
+deepset:train:52,deepset,en,rule,
+deepset:train:53,deepset,en,rule,
+deepset:train:54,deepset,en,rule,
+deepset:train:55,deepset,en,rule,
+deepset:train:56,deepset,en,rule,
+deepset:train:57,deepset,en,rule,
+deepset:train:58,deepset,en,rule,
+deepset:train:59,deepset,en,rule,
+deepset:train:60,deepset,en,manual,short English prompt; rule unsure
+deepset:train:61,deepset,en,rule,
+deepset:train:62,deepset,en,rule,
+deepset:train:63,deepset,en,rule,
+deepset:train:64,deepset,en,rule,
+deepset:train:65,deepset,en,manual,short English prompt; rule unsure
+deepset:train:66,deepset,en,rule,
+deepset:train:67,deepset,en,manual,short English prompt; rule unsure
+deepset:train:68,deepset,en,rule,
+deepset:train:69,deepset,en,rule,
+deepset:train:70,deepset,en,rule,
+deepset:train:71,deepset,en,rule,
+deepset:train:72,deepset,en,rule,
+deepset:train:73,deepset,en,manual,short English prompt; rule unsure
+deepset:train:74,deepset,en,rule,
+deepset:train:75,deepset,en,manual,short English prompt; rule unsure
+deepset:train:76,deepset,en,rule,
+deepset:train:77,deepset,en,rule,
+deepset:train:78,deepset,en,rule,
+deepset:train:79,deepset,en,manual,short English prompt; rule unsure
+deepset:train:80,deepset,en,rule,
+deepset:train:81,deepset,en,manual,short English prompt; rule unsure
+deepset:train:82,deepset,en,rule,
+deepset:train:83,deepset,en,rule,
+deepset:train:84,deepset,en,rule,
+deepset:train:85,deepset,en,rule,
+deepset:train:86,deepset,en,rule,
+deepset:train:87,deepset,en,rule,
+deepset:train:88,deepset,en,rule,
+deepset:train:89,deepset,en,rule,
+deepset:train:90,deepset,en,manual,short English prompt; rule unsure
+deepset:train:91,deepset,en,manual,short English prompt; rule unsure
+deepset:train:92,deepset,en,manual,short English prompt; rule unsure
+deepset:train:93,deepset,en,rule,
+deepset:train:94,deepset,en,rule,
+deepset:train:95,deepset,en,manual,short English prompt; rule unsure
+deepset:train:96,deepset,en,manual,short English prompt; rule unsure
+deepset:train:97,deepset,en,rule,
+deepset:train:98,deepset,en,rule,
+deepset:train:99,deepset,en,manual,short English prompt; rule unsure
+deepset:train:100,deepset,en,manual,short English prompt; rule unsure
+deepset:train:101,deepset,en,rule,
+deepset:train:102,deepset,en,rule,
+deepset:train:103,deepset,en,rule,
+deepset:train:104,deepset,en,manual,short English prompt; rule unsure
+deepset:train:105,deepset,en,rule,
+deepset:train:106,deepset,en,manual,short English prompt; rule unsure
+deepset:train:107,deepset,en,manual,short English prompt; rule unsure
+deepset:train:108,deepset,en,manual,short English prompt; rule unsure
+deepset:train:109,deepset,en,rule,
+deepset:train:110,deepset,en,rule,
+deepset:train:111,deepset,en,rule,
+deepset:train:112,deepset,en,rule,
+deepset:train:113,deepset,en,manual,short English prompt; rule unsure
+deepset:train:114,deepset,en,rule,
+deepset:train:115,deepset,en,manual,short English prompt; rule unsure
+deepset:train:116,deepset,en,rule,
+deepset:train:117,deepset,en,rule,
+deepset:train:118,deepset,en,rule,
+deepset:train:119,deepset,en,rule,
+deepset:train:120,deepset,en,rule,
+deepset:train:121,deepset,en,rule,
+deepset:train:122,deepset,en,rule,
+deepset:train:123,deepset,en,rule,
+deepset:train:124,deepset,en,rule,
+deepset:train:125,deepset,en,rule,
+deepset:train:126,deepset,en,rule,
+deepset:train:127,deepset,en,rule,
+deepset:train:128,deepset,en,rule,
+deepset:train:129,deepset,en,rule,
+deepset:train:130,deepset,en,rule,
+deepset:train:131,deepset,en,manual,short English prompt; rule unsure
+deepset:train:132,deepset,en,rule,
+deepset:train:133,deepset,en,rule,
+deepset:train:134,deepset,en,rule,
+deepset:train:135,deepset,en,rule,
+deepset:train:136,deepset,en,manual,short English prompt; rule unsure
+deepset:train:137,deepset,en,rule,
+deepset:train:138,deepset,en,rule,
+deepset:train:139,deepset,en,manual,short English prompt; rule unsure
+deepset:train:140,deepset,en,rule,
+deepset:train:141,deepset,en,rule,
+deepset:train:142,deepset,en,rule,
+deepset:train:143,deepset,en,rule,
+deepset:train:144,deepset,en,rule,
+deepset:train:145,deepset,en,rule,
+deepset:train:146,deepset,en,rule,
+deepset:train:147,deepset,en,rule,
+deepset:train:148,deepset,en,rule,
+deepset:train:149,deepset,en,rule,
+deepset:train:150,deepset,en,rule,
+deepset:train:151,deepset,en,manual,short English prompt; rule unsure
+deepset:train:152,deepset,en,rule,
+deepset:train:153,deepset,en,rule,
+deepset:train:154,deepset,en,rule,
+deepset:train:155,deepset,en,rule,
+deepset:train:156,deepset,en,rule,
+deepset:train:157,deepset,en,manual,short English prompt; rule unsure
+deepset:train:158,deepset,en,rule,
+deepset:train:159,deepset,en,rule,
+deepset:train:160,deepset,en,rule,
+deepset:train:161,deepset,en,manual,short English prompt; rule unsure
+deepset:train:162,deepset,en,rule,
+deepset:train:163,deepset,en,manual,short English prompt; rule unsure
+deepset:train:164,deepset,en,rule,
+deepset:train:165,deepset,en,rule,
+deepset:train:166,deepset,en,rule,
+deepset:train:167,deepset,en,rule,
+deepset:train:168,deepset,en,rule,
+deepset:train:169,deepset,en,rule,
+deepset:train:170,deepset,en,rule,
+deepset:train:171,deepset,en,manual,short English prompt; rule unsure
+deepset:train:172,deepset,en,rule,
+deepset:train:173,deepset,en,manual,English; only a German surname
+deepset:train:174,deepset,en,rule,
+deepset:train:175,deepset,en,rule,
+deepset:train:176,deepset,en,rule,
+deepset:train:177,deepset,en,rule,
+deepset:train:178,deepset,en,rule,
+deepset:train:179,deepset,en,rule,
+deepset:train:180,deepset,de,rule,
+deepset:train:181,deepset,de,rule,
+deepset:train:182,deepset,de,rule,
+deepset:train:183,deepset,de,rule,
+deepset:train:184,deepset,de,rule,
+deepset:train:185,deepset,de,rule,
+deepset:train:186,deepset,de,rule,
+deepset:train:187,deepset,de,rule,
+deepset:train:188,deepset,de,rule,
+deepset:train:189,deepset,de,manual,short German prompt; rule unsure
+deepset:train:190,deepset,de,rule,
+deepset:train:191,deepset,de,rule,
+deepset:train:192,deepset,de,manual,short German prompt; rule unsure
+deepset:train:193,deepset,de,manual,short German prompt; rule unsure
+deepset:train:194,deepset,de,rule,
+deepset:train:195,deepset,de,manual,short German prompt; rule unsure
+deepset:train:196,deepset,de,manual,short German prompt; rule unsure
+deepset:train:197,deepset,de,rule,
+deepset:train:198,deepset,de,rule,
+deepset:train:199,deepset,de,rule,
+deepset:train:200,deepset,de,rule,
+deepset:train:201,deepset,de,rule,
+deepset:train:202,deepset,de,rule,
+deepset:train:203,deepset,de,manual,short German prompt; rule unsure
+deepset:train:204,deepset,de,rule,
+deepset:train:205,deepset,de,manual,short German prompt; rule unsure
+deepset:train:206,deepset,de,rule,
+deepset:train:207,deepset,de,rule,
+deepset:train:208,deepset,de,manual,short German prompt; rule unsure
+deepset:train:209,deepset,de,rule,
+deepset:train:210,deepset,de,manual,short German prompt; rule unsure
+deepset:train:211,deepset,de,rule,
+deepset:train:212,deepset,de,rule,
+deepset:train:213,deepset,de,rule,
+deepset:train:214,deepset,de,manual,short German prompt; rule unsure
+deepset:train:215,deepset,de,rule,
+deepset:train:216,deepset,de,rule,
+deepset:train:217,deepset,de,rule,
+deepset:train:218,deepset,de,rule,
+deepset:train:219,deepset,de,rule,
+deepset:train:220,deepset,de,manual,short German prompt; rule unsure
+deepset:train:221,deepset,de,rule,
+deepset:train:222,deepset,de,rule,
+deepset:train:223,deepset,de,rule,
+deepset:train:224,deepset,de,rule,
+deepset:train:225,deepset,de,rule,
+deepset:train:226,deepset,de,manual,short German prompt; rule unsure
+deepset:train:227,deepset,de,rule,
+deepset:train:228,deepset,de,rule,
+deepset:train:229,deepset,de,rule,
+deepset:train:230,deepset,de,manual,short German prompt; rule unsure
+deepset:train:231,deepset,de,rule,
+deepset:train:232,deepset,de,rule,
+deepset:train:233,deepset,de,rule,
+deepset:train:234,deepset,de,rule,
+deepset:train:235,deepset,de,rule,
+deepset:train:236,deepset,de,rule,
+deepset:train:237,deepset,de,rule,
+deepset:train:238,deepset,de,rule,
+deepset:train:239,deepset,de,rule,
+deepset:train:240,deepset,de,manual,short German prompt; rule unsure
+deepset:train:241,deepset,de,rule,
+deepset:train:242,deepset,de,rule,
+deepset:train:243,deepset,de,manual,short German prompt; rule unsure
+deepset:train:244,deepset,de,rule,
+deepset:train:245,deepset,de,manual,short German prompt; rule unsure
+deepset:train:246,deepset,de,rule,
+deepset:train:247,deepset,de,rule,
+deepset:train:248,deepset,de,rule,
+deepset:train:249,deepset,de,rule,
+deepset:train:250,deepset,de,rule,
+deepset:train:251,deepset,de,rule,
+deepset:train:252,deepset,de,manual,short German prompt; rule unsure
+deepset:train:253,deepset,de,manual,short German prompt; rule unsure
+deepset:train:254,deepset,de,rule,
+deepset:train:255,deepset,de,rule,
+deepset:train:256,deepset,de,rule,
+deepset:train:257,deepset,de,rule,
+deepset:train:258,deepset,de,rule,
+deepset:train:259,deepset,de,manual,short German prompt; rule unsure
+deepset:train:260,deepset,de,rule,
+deepset:train:261,deepset,de,manual,short German prompt; rule unsure
+deepset:train:262,deepset,de,rule,
+deepset:train:263,deepset,de,manual,short German prompt; rule unsure
+deepset:train:264,deepset,de,rule,
+deepset:train:265,deepset,de,rule,
+deepset:train:266,deepset,de,rule,
+deepset:train:267,deepset,de,rule,
+deepset:train:268,deepset,de,rule,
+deepset:train:269,deepset,de,rule,
+deepset:train:270,deepset,de,manual,short German prompt; rule unsure
+deepset:train:271,deepset,de,rule,
+deepset:train:272,deepset,de,manual,short German prompt; rule unsure
+deepset:train:273,deepset,de,rule,
+deepset:train:274,deepset,de,rule,
+deepset:train:275,deepset,de,manual,short German prompt; rule unsure
+deepset:train:276,deepset,de,manual,German; langdetect said Dutch
+deepset:train:277,deepset,de,rule,
+deepset:train:278,deepset,de,rule,
+deepset:train:279,deepset,de,manual,short German prompt; rule unsure
+deepset:train:280,deepset,de,manual,short German prompt; rule unsure
+deepset:train:281,deepset,de,rule,
+deepset:train:282,deepset,de,manual,short German prompt; rule unsure
+deepset:train:283,deepset,de,rule,
+deepset:train:284,deepset,de,rule,
+deepset:train:285,deepset,de,rule,
+deepset:train:286,deepset,de,manual,short German prompt; rule unsure
+deepset:train:287,deepset,de,rule,
+deepset:train:288,deepset,de,manual,short German prompt; rule unsure
+deepset:train:289,deepset,de,rule,
+deepset:train:290,deepset,de,rule,
+deepset:train:291,deepset,de,rule,
+deepset:train:292,deepset,de,manual,short German prompt; rule unsure
+deepset:train:293,deepset,de,manual,short German prompt; rule unsure
+deepset:train:294,deepset,de,manual,short German prompt; rule unsure
+deepset:train:295,deepset,de,manual,short German prompt; rule unsure
+deepset:train:296,deepset,de,rule,
+deepset:train:297,deepset,de,rule,
+deepset:train:298,deepset,de,rule,
+deepset:train:299,deepset,de,rule,
+deepset:train:300,deepset,de,rule,
+deepset:train:301,deepset,de,rule,
+deepset:train:302,deepset,de,rule,
+deepset:train:303,deepset,de,rule,
+deepset:train:304,deepset,de,rule,
+deepset:train:305,deepset,de,rule,
+deepset:train:306,deepset,de,rule,
+deepset:train:307,deepset,de,rule,
+deepset:train:308,deepset,de,rule,
+deepset:train:309,deepset,de,rule,
+deepset:train:310,deepset,de,rule,
+deepset:train:311,deepset,de,manual,short German prompt; rule unsure
+deepset:train:312,deepset,de,manual,German; langdetect said Afrikaans
+deepset:train:313,deepset,de,manual,short German prompt; rule unsure
+deepset:train:314,deepset,de,rule,
+deepset:train:315,deepset,de,rule,
+deepset:train:316,deepset,de,manual,short German prompt; rule unsure
+deepset:train:317,deepset,de,manual,German; langdetect said Afrikaans
+deepset:train:318,deepset,de,rule,
+deepset:train:319,deepset,de,manual,short German prompt; rule unsure
+deepset:train:320,deepset,de,rule,
+deepset:train:321,deepset,de,rule,
+deepset:train:322,deepset,de,rule,
+deepset:train:323,deepset,de,rule,
+deepset:train:324,deepset,de,rule,
+deepset:train:325,deepset,de,rule,
+deepset:train:326,deepset,de,rule,
+deepset:train:327,deepset,de,manual,short German prompt; rule unsure
+deepset:train:328,deepset,de,rule,
+deepset:train:329,deepset,de,rule,
+deepset:train:330,deepset,de,rule,
+deepset:train:331,deepset,de,manual,short German prompt; rule unsure
+deepset:train:332,deepset,de,rule,
+deepset:train:333,deepset,de,rule,
+deepset:train:334,deepset,mixed,rule,
+deepset:train:335,deepset,de,rule,
+deepset:train:336,deepset,de,rule,
+deepset:train:337,deepset,de,manual,short German prompt; rule unsure
+deepset:train:338,deepset,de,rule,
+deepset:train:339,deepset,de,manual,short German prompt; rule unsure
+deepset:train:340,deepset,de,manual,short German prompt; rule unsure
+deepset:train:341,deepset,de,manual,short German prompt; rule unsure
+deepset:train:342,deepset,de,rule,
+deepset:train:343,deepset,de,manual,short German prompt; rule unsure
+deepset:train:344,deepset,de,rule,
+deepset:train:345,deepset,de,rule,
+deepset:train:346,deepset,de,rule,
+deepset:train:347,deepset,de,rule,
+deepset:train:348,deepset,de,rule,
+deepset:train:349,deepset,de,rule,
+deepset:train:350,deepset,de,rule,
+deepset:train:351,deepset,de,manual,short German prompt; rule unsure
+deepset:train:352,deepset,de,rule,
+deepset:train:353,deepset,de,rule,
+deepset:train:354,deepset,de,rule,
+deepset:train:355,deepset,de,rule,
+deepset:train:356,deepset,de,manual,short German prompt; rule unsure
+deepset:train:357,deepset,de,rule,
+deepset:train:358,deepset,de,rule,
+deepset:train:359,deepset,de,rule,
+deepset:train:360,deepset,de,rule,
+deepset:train:361,deepset,de,rule,
+deepset:train:362,deepset,en,rule,
+deepset:train:363,deepset,en,rule,
+deepset:train:364,deepset,de,rule,
+deepset:train:365,deepset,other,manual,Spanish
+deepset:train:366,deepset,en,rule,
+deepset:train:367,deepset,en,rule,
+deepset:train:368,deepset,en,manual,short English prompt; rule unsure
+deepset:train:369,deepset,de,rule,
+deepset:train:370,deepset,de,rule,
+deepset:train:371,deepset,de,rule,
+deepset:train:372,deepset,en,rule,
+deepset:train:373,deepset,de,rule,
+deepset:train:374,deepset,de,rule,
+deepset:train:375,deepset,en,rule,
+deepset:train:376,deepset,en,rule,
+deepset:train:377,deepset,mixed,manual,English with a German sentence in the payload
+deepset:train:378,deepset,en,rule,
+deepset:train:379,deepset,en,rule,
+deepset:train:380,deepset,en,rule,
+deepset:train:381,deepset,en,rule,
+deepset:train:382,deepset,de,rule,
+deepset:train:383,deepset,en,rule,
+deepset:train:384,deepset,en,rule,
+deepset:train:385,deepset,en,rule,
+deepset:train:386,deepset,en,rule,
+deepset:train:387,deepset,en,rule,
+deepset:train:388,deepset,en,manual,short English prompt; rule unsure
+deepset:train:389,deepset,other,manual,Spanish
+deepset:train:390,deepset,en,rule,
+deepset:train:391,deepset,en,rule,
+deepset:train:392,deepset,en,rule,
+deepset:train:393,deepset,de,rule,
+deepset:train:394,deepset,en,rule,
+deepset:train:395,deepset,en,rule,
+deepset:train:396,deepset,en,rule,
+deepset:train:397,deepset,en,rule,
+deepset:train:398,deepset,de,rule,
+deepset:train:399,deepset,en,rule,
+deepset:train:400,deepset,en,rule,
+deepset:train:401,deepset,en,rule,
+deepset:train:402,deepset,en,rule,
+deepset:train:403,deepset,en,rule,
+deepset:train:404,deepset,en,rule,
+deepset:train:405,deepset,en,rule,
+deepset:train:406,deepset,other,manual,Croatian
+deepset:train:407,deepset,en,rule,
+deepset:train:408,deepset,en,manual,short English prompt; rule unsure
+deepset:train:409,deepset,en,rule,
+deepset:train:410,deepset,de,rule,
+deepset:train:411,deepset,en,rule,
+deepset:train:412,deepset,de,rule,
+deepset:train:413,deepset,en,manual,short English prompt; rule unsure
+deepset:train:414,deepset,other,manual,Spanish
+deepset:train:415,deepset,en,rule,
+deepset:train:416,deepset,en,rule,
+deepset:train:417,deepset,de,rule,
+deepset:train:418,deepset,en,rule,
+deepset:train:419,deepset,en,rule,
+deepset:train:420,deepset,en,rule,
+deepset:train:421,deepset,en,manual,short English prompt; rule unsure
+deepset:train:422,deepset,en,manual,English with spaced-out letters
+deepset:train:423,deepset,en,rule,
+deepset:train:424,deepset,en,rule,
+deepset:train:425,deepset,de,rule,
+deepset:train:426,deepset,en,manual,short English prompt; rule unsure
+deepset:train:427,deepset,other,manual,French
+deepset:train:428,deepset,en,rule,
+deepset:train:429,deepset,en,rule,
+deepset:train:430,deepset,en,rule,
+deepset:train:431,deepset,de,rule,
+deepset:train:432,deepset,de,rule,
+deepset:train:433,deepset,other,manual,"single word, not English or German"
+deepset:train:434,deepset,en,rule,
+deepset:train:435,deepset,en,rule,
+deepset:train:436,deepset,en,rule,
+deepset:train:437,deepset,en,rule,
+deepset:train:438,deepset,de,rule,
+deepset:train:439,deepset,en,rule,
+deepset:train:440,deepset,en,rule,
+deepset:train:441,deepset,en,rule,
+deepset:train:442,deepset,de,rule,
+deepset:train:443,deepset,de,rule,
+deepset:train:444,deepset,en,rule,
+deepset:train:445,deepset,en,rule,
+deepset:train:446,deepset,other,manual,romanized Hindi
+deepset:train:447,deepset,de,rule,
+deepset:train:448,deepset,en,rule,
+deepset:train:449,deepset,en,rule,
+deepset:train:450,deepset,en,rule,
+deepset:train:451,deepset,en,rule,
+deepset:train:452,deepset,en,rule,
+deepset:train:453,deepset,other,manual,Croatian
+deepset:train:454,deepset,de,rule,
+deepset:train:455,deepset,en,rule,
+deepset:train:456,deepset,en,manual,short English prompt; rule unsure
+deepset:train:457,deepset,en,rule,
+deepset:train:458,deepset,de,rule,
+deepset:train:459,deepset,en,rule,
+deepset:train:460,deepset,en,rule,
+deepset:train:461,deepset,en,rule,
+deepset:train:462,deepset,en,rule,
+deepset:train:463,deepset,en,rule,
+deepset:train:464,deepset,en,manual,English; langdetect said Tagalog
+deepset:train:465,deepset,en,rule,
+deepset:train:466,deepset,other,manual,Russian with English
+deepset:train:467,deepset,en,rule,
+deepset:train:468,deepset,en,rule,
+deepset:train:469,deepset,mixed,rule,
+deepset:train:470,deepset,en,rule,
+deepset:train:471,deepset,en,rule,
+deepset:train:472,deepset,en,rule,
+deepset:train:473,deepset,en,rule,
+deepset:train:474,deepset,de,manual,German; langdetect said Afrikaans
+deepset:train:475,deepset,en,rule,
+deepset:train:476,deepset,en,manual,short English prompt; rule unsure
+deepset:train:477,deepset,other,manual,Spanish
+deepset:train:478,deepset,en,rule,
+deepset:train:479,deepset,other,manual,Khmer
+deepset:train:480,deepset,en,rule,
+deepset:train:481,deepset,en,rule,
+deepset:train:482,deepset,en,rule,
+deepset:train:483,deepset,en,rule,
+deepset:train:484,deepset,en,manual,short English prompt; rule unsure
+deepset:train:485,deepset,en,rule,
+deepset:train:486,deepset,de,rule,
+deepset:train:487,deepset,en,rule,
+deepset:train:488,deepset,mixed,manual,English with a German sentence in the payload
+deepset:train:489,deepset,en,rule,
+deepset:train:490,deepset,mixed,rule,
+deepset:train:491,deepset,mixed,manual,German keywords followed by English
+deepset:train:492,deepset,mixed,rule,
+deepset:train:493,deepset,de,rule,
+deepset:train:494,deepset,mixed,rule,
+deepset:train:495,deepset,en,rule,
+deepset:train:496,deepset,mixed,manual,English keywords followed by German
+deepset:train:497,deepset,de,rule,
+deepset:train:498,deepset,en,rule,
+deepset:train:499,deepset,mixed,rule,
+deepset:train:500,deepset,en,rule,
+deepset:train:501,deepset,mixed,rule,
+deepset:train:502,deepset,en,rule,
+deepset:train:503,deepset,de,rule,
+deepset:train:504,deepset,other,manual,German question with a Croatian injection
+deepset:train:505,deepset,en,rule,
+deepset:train:506,deepset,mixed,manual,German keywords followed by English
+deepset:train:507,deepset,en,rule,
+deepset:train:508,deepset,en,rule,
+deepset:train:509,deepset,other,manual,English question with a French injection
+deepset:train:510,deepset,de,rule,
+deepset:train:511,deepset,mixed,manual,English keywords followed by German
+deepset:train:512,deepset,en,rule,
+deepset:train:513,deepset,mixed,rule,
+deepset:train:514,deepset,en,rule,
+deepset:train:515,deepset,mixed,rule,
+deepset:train:516,deepset,mixed,rule,
+deepset:train:517,deepset,en,rule,
+deepset:train:518,deepset,mixed,rule,
+deepset:train:519,deepset,mixed,rule,
+deepset:train:520,deepset,en,rule,
+deepset:train:521,deepset,mixed,rule,
+deepset:train:522,deepset,mixed,manual,German keywords followed by English
+deepset:train:523,deepset,mixed,rule,
+deepset:train:524,deepset,en,rule,
+deepset:train:525,deepset,mixed,manual,English fragment followed by German
+deepset:train:526,deepset,mixed,rule,
+deepset:train:527,deepset,en,rule,
+deepset:train:528,deepset,mixed,rule,
+deepset:train:529,deepset,en,rule,
+deepset:train:530,deepset,mixed,rule,
+deepset:train:531,deepset,mixed,rule,
+deepset:train:532,deepset,mixed,rule,
+deepset:train:533,deepset,de,rule,
+deepset:train:534,deepset,mixed,rule,
+deepset:train:535,deepset,en,rule,
+deepset:train:536,deepset,mixed,manual,English keywords followed by German
+deepset:train:537,deepset,mixed,rule,
+deepset:train:538,deepset,en,rule,
+deepset:train:539,deepset,mixed,rule,
+deepset:train:540,deepset,mixed,rule,
+deepset:train:541,deepset,mixed,rule,
+deepset:train:542,deepset,en,rule,
+deepset:train:543,deepset,mixed,rule,
+deepset:train:544,deepset,de,rule,
+deepset:train:545,deepset,mixed,rule,
+gandalf:test:83,gandalf,other,manual,written in Russian
+gandalf:train:95,gandalf,de,manual,written in German
+gandalf:train:359,gandalf,de,manual,written in German
+gandalf:train:452,gandalf,de,manual,written in German
+gandalf:train:682,gandalf,other,manual,English sentence followed by a Spanish sentence
+gandalf:validation:48,gandalf,de,manual,written in German

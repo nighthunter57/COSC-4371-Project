@@ -1,5 +1,7 @@
 {
   "safeguard_rows_loaded": 10296,
+  "removed_non_english_safeguard_rows": 11,
+  "removed_non_english_gandalf_rows": 6,
   "removed_label_conflict_rows": 5,
   "removed_exact_duplicate_rows": 156,
   "removed_matching_external_test": {
@@ -8,8 +10,8 @@
     "near_only": 7
   },
   "near_dup_groups_crossing_splits": 0,
-  "near_dup_rows_kept_together": 744,
-  "safeguard_rows_kept": 10122,
+  "near_dup_rows_kept_together": 742,
+  "safeguard_rows_kept": 10111,
   "leakage": {
     "train_rows_exactly_duplicating_any_test_row": 0,
     "train_rows_exactly_duplicating_a_validation_row": 0,

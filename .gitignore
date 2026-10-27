@@ -6,6 +6,9 @@ __pycache__/
 # Downloaded datasets (fetched by run_baseline.py at pinned revisions; not redistributed)
 data/
 
+# Review worksheet with prompt text (rebuilt by language_review.py)
+language_candidates.csv
+
 # Course checker: download check_checkpoint.py from Canvas into this folder
 check_checkpoint.py
 

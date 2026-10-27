@@ -8,6 +8,10 @@ It downloads the three datasets at pinned versions, audits them, builds the spli
 trains TF-IDF + logistic regression on English Safe-Guard, picks the threshold on
 validation, scores every test row, and writes:
 
+Language labels come from language_review.csv (see language_review.py). Safe-Guard and
+Gandalf prompts are English unless that file says otherwise.
+
+
     split.csv, scores.csv                 (checked by check_checkpoint.py)
     outputs/audit.json                    (audit table numbers, section 2(b))
     outputs/split_log.json                (removals and leakage counts, 2(c)-(d))
@@ -47,6 +51,7 @@ DATASETS = {
 }
 
 ROOT = Path(__file__).resolve().parent
+LANG_REVIEW = "language_review.csv"
 DATA = ROOT / "data"
 OUT = ROOT / "outputs"
 
@@ -77,6 +82,15 @@ def norm_key(text):
     """Normalized text: NFKC, casefold, punctuation and whitespace collapsed."""
     t = unicodedata.normalize("NFKC", text).casefold()
     return " ".join(re.sub(r"[\W_]+", " ", t).split())
+
+
+def reviewed_language(df):
+    """Reviewed language per row: the label in language_review.csv, else English."""
+    review = pd.read_csv(ROOT / LANG_REVIEW).set_index("row_id")["language"]
+    lang = df["row_id"].map(review)
+    if df["dataset"].iloc[0] == "deepset":
+        assert lang.notna().all(), "every deepset row needs a reviewed language"
+    return lang.fillna("en")
 
 
 def detect_lang(texts):
@@ -113,7 +127,8 @@ def audit(df, primary, near_groups=None):
     out["exact_duplicates"] = {"rule": "identical full text field",
                                "groups": int((dup > 1).sum()),
                                "extra_rows": int((dup - 1).sum())}
-    out["language_counts"] = {k: int(v) for k, v in df["lang"].value_counts().items()}
+    out["language_counts_reviewed"] = {k: int(v) for k, v in df["lang"].value_counts().items()}
+    out["langdetect_non_english_tags"] = int((df["langdetect"] != "en").sum())
     if primary:
         sizes = pd.Series(near_groups).value_counts()
         out["near_duplicates"] = {
@@ -163,6 +178,16 @@ def cross_near_matches(sg_texts, ext_texts):
 def build_split(sg, deepset, gandalf):
     log = {"safeguard_rows_loaded": len(sg)}
 
+    # 0. training is English only: drop Safe-Guard prompts the language review marks
+    #    as non-English or mixed, and keep only English Gandalf prompts for testing
+    non_en = sg["lang"] != "en"
+    log["removed_non_english_safeguard_rows"] = int(non_en.sum())
+    sg = sg[~non_en]
+    g_non_en = gandalf["lang"] != "en"
+    log["removed_non_english_gandalf_rows"] = int(g_non_en.sum())
+    ext_all = pd.concat([deepset, gandalf])   # every external row, for match removal
+    gandalf = gandalf[~g_non_en]
+
     # 1. drop every row of a text group that carries both labels
     conflict = sg.groupby("text")["label"].transform("nunique") > 1
     log["removed_label_conflict_rows"] = int(conflict.sum())
@@ -173,8 +198,8 @@ def build_split(sg, deepset, gandalf):
     log["removed_exact_duplicate_rows"] = int(dup.sum())
     sg = sg[~dup].reset_index(drop=True)
 
-    # 3. remove Safe-Guard rows that match an external test row (exact, normalized or near)
-    ext = pd.concat([deepset, gandalf])
+    # 3. remove Safe-Guard rows that match any external row (exact, normalized or near)
+    ext = ext_all
     exact = sg["text"].isin(set(ext["text"]))
     normed = sg["key"].isin(set(ext["key"])) & ~exact
     near = cross_near_matches(sg["text"], ext["text"]) & ~exact & ~normed
@@ -243,10 +268,8 @@ def main():
     sg, deepset, gandalf = (load(n) for n in ("safeguard", "deepset", "gandalf"))
     for df in (sg, deepset, gandalf):
         df["key"] = df["text"].map(norm_key)
-        df["lang"] = detect_lang(df["text"])
-
-    # deepset language groups for the main table: English, German, other
-    deepset["lang_group"] = deepset["lang"].where(deepset["lang"].isin(["en", "de"]), "other")
+        df["langdetect"] = detect_lang(df["text"])
+        df["lang"] = reviewed_language(df)
 
     audits = {
         "safeguard": audit(sg, primary=True,
@@ -264,7 +287,7 @@ def main():
     }
     audits["deepset_by_language"] = {
         g: {"rows": len(d), "injection": int(d["label"].sum()), "benign": int((d["label"] == 0).sum())}
-        for g, d in deepset.groupby("lang_group")}
+        for g, d in deepset.groupby("lang")}
 
     sg_split, deepset, gandalf, log = build_split(sg, deepset, gandalf)
     log["leakage"] = leakage_counts(sg_split, pd.concat([deepset, gandalf]))
@@ -292,16 +315,17 @@ def main():
     test_sets = [
         ("safeguard_test_en", sg_split[sg_split["split"] == "test"]),
         ("gandalf_en", gandalf),
-        ("deepset_en", deepset[deepset["lang_group"] == "en"]),
-        ("deepset_de_native", deepset[deepset["lang_group"] == "de"]),
-        ("deepset_other_lang", deepset[deepset["lang_group"] == "other"]),
+        ("deepset_en", deepset[deepset["lang"] == "en"]),
+        ("deepset_de_native", deepset[deepset["lang"] == "de"]),
+        ("deepset_mixed_en_de", deepset[deepset["lang"] == "mixed"]),
+        ("deepset_other_lang", deepset[deepset["lang"] == "other"]),
     ]
     scores = pd.concat([
         pd.DataFrame({"row_id": d["row_id"], "test_set": name, "label": d["label"],
                       "score": clf.predict_proba(feats.transform(d["text"]))[:, 1]})
         for name, d in test_sets], ignore_index=True)
 
-    cols = ["row_id", "dataset", "split", "label", "lang", "orig_split", "group"]
+    cols = ["row_id", "dataset", "split", "label", "lang", "langdetect", "orig_split", "group"]
     split = pd.concat([sg_split[cols], deepset[cols], gandalf[cols]], ignore_index=True)
     split.rename(columns={"group": "near_dup_group"}).to_csv(ROOT / "split.csv", index=False)
     scores.to_csv(ROOT / "scores.csv", index=False, float_format="%.6f")
