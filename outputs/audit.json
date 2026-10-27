@@ -1,0 +1,161 @@
+{
+  "safeguard": {
+    "rows": 10296,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "classes": {
+      "0": {
+        "count": 7150,
+        "pct": 69.44
+      },
+      "1": {
+        "count": 3146,
+        "pct": 30.56
+      }
+    },
+    "missing_target": 0,
+    "label_conflict_groups": 2,
+    "missing_text": 0,
+    "empty_text": 0,
+    "exact_duplicates": {
+      "rule": "identical full text field",
+      "groups": 91,
+      "extra_rows": 159
+    },
+    "language_counts": {
+      "en": 10174,
+      "it": 37,
+      "af": 18,
+      "es": 8,
+      "cy": 8,
+      "nl": 7,
+      "so": 6,
+      "pt": 6,
+      "de": 6,
+      "id": 4,
+      "ro": 3,
+      "pl": 3,
+      "tl": 2,
+      "no": 2,
+      "sw": 2,
+      "fr": 2,
+      "da": 2,
+      "sk": 1,
+      "tr": 1,
+      "unknown": 1,
+      "et": 1,
+      "ru": 1,
+      "ca": 1
+    },
+    "near_duplicates": {
+      "rule": "same normalized text (NFKC, casefold, punctuation and whitespace collapsed) or char_wb 3-5 gram TF-IDF cosine >= 0.9, linked into connected components (computed after exact-duplicate removal)",
+      "groups_with_2plus_rows": 269,
+      "rows_in_those_groups": 749,
+      "extra_rows": 480,
+      "largest_group": 21
+    },
+    "repeated_entities": "unavailable: no user, session or campaign ID field",
+    "time_range": "unavailable: no timestamp field"
+  },
+  "deepset": {
+    "rows": 662,
+    "columns": [
+      "text",
+      "label"
+    ],
+    "classes": {
+      "0": {
+        "count": 399,
+        "pct": 60.27
+      },
+      "1": {
+        "count": 263,
+        "pct": 39.73
+      }
+    },
+    "missing_target": 0,
+    "label_conflict_groups": 0,
+    "missing_text": 0,
+    "empty_text": 0,
+    "exact_duplicates": {
+      "rule": "identical full text field",
+      "groups": 0,
+      "extra_rows": 0
+    },
+    "language_counts": {
+      "en": 355,
+      "de": 265,
+      "es": 7,
+      "af": 6,
+      "nl": 5,
+      "id": 4,
+      "ro": 3,
+      "da": 3,
+      "sv": 3,
+      "hr": 2,
+      "fr": 2,
+      "it": 1,
+      "cy": 1,
+      "lt": 1,
+      "tl": 1,
+      "ru": 1,
+      "unknown": 1,
+      "sl": 1
+    }
+  },
+  "gandalf": {
+    "rows": 1000,
+    "columns": [
+      "text",
+      "similarity"
+    ],
+    "classes": "no label column; all rows treated as injections",
+    "missing_target": "label not supplied",
+    "missing_similarity": 0,
+    "missing_text": 0,
+    "empty_text": 0,
+    "exact_duplicates": {
+      "rule": "identical full text field",
+      "groups": 0,
+      "extra_rows": 0
+    },
+    "language_counts": {
+      "en": 950,
+      "fr": 31,
+      "it": 5,
+      "de": 4,
+      "da": 3,
+      "es": 2,
+      "ru": 1,
+      "nl": 1,
+      "id": 1,
+      "no": 1,
+      "tl": 1
+    }
+  },
+  "cross_dataset_exact_overlap": {
+    "safeguard_deepset_texts": 6,
+    "safeguard_deepset_label_disagreements": 5,
+    "safeguard_gandalf_texts": 0,
+    "deepset_gandalf_texts": 0
+  },
+  "deepset_by_language": {
+    "de": {
+      "rows": 265,
+      "injection": 88,
+      "benign": 177
+    },
+    "en": {
+      "rows": 355,
+      "injection": 157,
+      "benign": 198
+    },
+    "other": {
+      "rows": 42,
+      "injection": 18,
+      "benign": 24
+    }
+  }
+}

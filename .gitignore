@@ -1,0 +1,12 @@
+# Python environment
+.venv/
+__pycache__/
+*.pyc
+
+# Downloaded datasets (fetched by run_baseline.py at pinned revisions; not redistributed)
+data/
+
+# Course checker: download check_checkpoint.py from Canvas into this folder
+check_checkpoint.py
+
+.DS_Store
