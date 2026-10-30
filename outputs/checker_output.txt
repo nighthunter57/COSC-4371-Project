@@ -35,55 +35,55 @@ Test set: gandalf_en
   recall                    0.9909 [0.9849, 0.9970]
 
 Test set: deepset_en
-  test rows                 350
-  positive rows             138 (39.43%)
-  negative rows             212 (60.57%)
+  test rows                 348
+  positive rows             136 (39.08%)
+  negative rows             212 (60.92%)
   bootstrap resamples       1000
-  random-scorer AP          0.3943 (equals the positive share)
+  random-scorer AP          0.3908 (equals the positive share)
   random-scorer AUROC       0.5000
-  precision                 0.8614 [0.7907, 0.9248]
-  recall                    0.6304 [0.5504, 0.7183]
-  false-positive rate       0.0660 [0.0340, 0.1019]
-  AP                        0.8548 [0.7972, 0.9090]
-  AUROC                     0.8897 [0.8514, 0.9236]
+  precision                 0.8600 [0.7901, 0.9231]
+  recall                    0.6324 [0.5473, 0.7110]
+  false-positive rate       0.0660 [0.0354, 0.1010]
+  AP                        0.8536 [0.7864, 0.9060]
+  AUROC                     0.8910 [0.8538, 0.9246]
 
 Test set: deepset_de_native
-  test rows                 255
-  positive rows             70 (27.45%)
-  negative rows             185 (72.55%)
+  test rows                 252
+  positive rows             67 (26.59%)
+  negative rows             185 (73.41%)
   bootstrap resamples       1000
-  random-scorer AP          0.2745 (equals the positive share)
+  random-scorer AP          0.2659 (equals the positive share)
   random-scorer AUROC       0.5000
-  precision                 0.4737 [0.2500, 0.7143]
-  recall                    0.1286 [0.0548, 0.2078]
-  false-positive rate       0.0541 [0.0226, 0.0874]
-  AP                        0.4549 [0.3480, 0.5748]
-  AUROC                     0.6559 [0.5775, 0.7302]
+  precision                 0.4737 [0.2500, 0.7059]
+  recall                    0.1343 [0.0597, 0.2223]
+  false-positive rate       0.0541 [0.0232, 0.0886]
+  AP                        0.4561 [0.3509, 0.5849]
+  AUROC                     0.6703 [0.5943, 0.7486]
 
 Test set: deepset_mixed_en_de
-  test rows                 42
-  positive rows             42 (100.00%)
+  test rows                 41
+  positive rows             41 (100.00%)
   negative rows             0 (0.00%)
   bootstrap resamples       1000
   one class only (positive): report recall only
-  recall                    0.1667 [0.0476, 0.2857]
+  recall                    0.1707 [0.0732, 0.2927]
 
 Test set: deepset_other_lang
-  test rows                 15
-  positive rows             13 (86.67%)
-  negative rows             2 (13.33%)
+  test rows                 21
+  positive rows             19 (90.48%)
+  negative rows             2 (9.52%)
   bootstrap resamples       1000
-  random-scorer AP          0.8667 (equals the positive share)
+  random-scorer AP          0.9048 (equals the positive share)
   random-scorer AUROC       0.5000
   precision                 1.0000 [1.0000, 1.0000]
-  recall                    0.0769 [0.0000, 0.2147]
+  recall                    0.1053 [0.0000, 0.2500]
   false-positive rate       0.0000 [0.0000, 0.0000]
-  AP                        0.9752 [0.8975, 1.0000]
-  AUROC                     0.8462 [0.5385, 1.0000]
+  AP                        0.9637 [0.8898, 0.9951]
+  AUROC                     0.6842 [0.4000, 0.9000]
 
 Warnings
 --------
 - safeguard_test_en: recall, AP, AUROC at or above 0.99. Name the leakage check you ran and its result in section 3(e).
 - gandalf_en: recall at or above 0.99. Name the leakage check you ran and its result in section 3(e).
 - deepset_other_lang: precision at or above 0.99. Name the leakage check you ran and its result in section 3(e).
-- deepset_other_lang: fewer than 30 rows in one class (13 positive, 2 negative). The intervals will be wide; keep this in mind for the yes difference in section 5(b).
+- deepset_other_lang: fewer than 30 rows in one class (19 positive, 2 negative). The intervals will be wide; keep this in mind for the yes difference in section 5(b).

@@ -16,7 +16,13 @@ langdetect alone is not used, because it mislabels many short English prompts.
 Deepset mixes English and German, often inside one prompt. Each deepset prompt is first
 labeled by a word rule (English and German function words, plus umlauts), then every
 prompt where the rule is unsure, finds both languages, or disagrees with langdetect was
-reviewed by hand. MANUAL holds those decisions.
+reviewed by hand. A second check stops the rule from labeling a prompt en, de, or mixed
+when it contains a third language (Spanish, French, Croatian, or romanized Hindi function
+words, or non-Latin script); those prompts must have a manual label. DEEPSET_MANUAL holds
+the manual decisions.
+
+language_review.csv stores the label of every deepset prompt and only the non-English
+exceptions for Safe-Guard and Gandalf; flagged prompts confirmed as English are not listed.
 
 Run:  python language_review.py   (also writes language_candidates.csv, not committed,
                                    which includes prompt text for reviewing)
@@ -79,6 +85,12 @@ _OTHER = {
     "train:479": "Khmer", "train:446": "romanized Hindi",
     "train:504": "German question with a Croatian injection",
     "train:509": "English question with a French injection",
+    "train:545": "English, German and Spanish in one prompt",
+    "train:505": "English question with a Spanish injection",
+    "test:103": "German question with a Spanish injection",
+    "test:113": "German questions with a Spanish injection",
+    "train:544": "German questions with a Croatian injection",
+    "train:437": "English jailbreak containing a Greek sentence",
 }
 _MIXED = {
     "test:107": "German keywords followed by English", "train:491": "German keywords followed by English",
@@ -118,6 +130,12 @@ von für auf den dem des sich wie wer warum wo bitte alle alles sind wird werden
 oder aber nach bei über aus noch nur mein dein gibt sehr hat haben bin mir mich dir dich im vom
 zum zur uns welche welcher welches vergiss schreibe sage sag gesagte jetzt heute gerne würde
 eines diese dieser man wurde sein ihre ihren ob wenn dass bist habe viel viele""".split())
+
+
+THIRD_LANGUAGE = re.compile(
+    r"\b(olvide|olvida|olvidar|instrucciones|dices|digo|tienes|muerto|quien|oubliez|dites|"
+    r"allemand|déteste|zaboravi|instrukcije|svima|treba|aapako|yaad|rakhana|kahane)\b"
+    r"|[\u0370-\u03ff\u0400-\u04ff\u0600-\u06ff\u1780-\u17ff\u4e00-\u9fff]")
 
 
 def word_rule(text):
@@ -182,6 +200,7 @@ def main():
             elif name == "deepset":
                 rule = word_rule(text)
                 assert rule != "unsure", f"{rid} needs a manual label"
+                assert not THIRD_LANGUAGE.search(text.lower()), f"{rid} has a third language"
                 review.append({"row_id": rid, "dataset": name, "language": rule,
                                "method": "rule", "note": ""})
     pd.DataFrame(candidates).to_csv("language_candidates.csv", index=False)

@@ -111,8 +111,11 @@ split, the classifier, and the threshold rule.
 **Language review.** langdetect mislabels many short English prompts, so it is not used
 to choose rows. `language_review.py` flags every prompt that might not be English, and
 each flagged prompt was checked by hand. Deepset prompts are labeled English, German,
-mixed (English and German in one prompt), or other. The labels and the reason for every
-manual decision are in `language_review.csv`.
+mixed (English and German in one prompt), or other (any other language, alone or with
+English or German). `language_review.csv` stores the label of every deepset prompt and the
+non-English exceptions in Safe-Guard and Gandalf, with the reason for each manual label.
+Flagged Safe-Guard and Gandalf prompts confirmed as English are not listed; every prompt
+not in the file is English.
 
 **Split.**
 1. Safe-Guard, the only training source: drop the 11 prompts that are not English, then

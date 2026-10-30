@@ -66,10 +66,10 @@
       "extra_rows": 0
     },
     "language_counts_reviewed": {
-      "en": 350,
-      "de": 255,
-      "mixed": 42,
-      "other": 15
+      "en": 348,
+      "de": 252,
+      "mixed": 41,
+      "other": 21
     },
     "langdetect_non_english_tags": 307
   },
@@ -104,23 +104,23 @@
   },
   "deepset_by_language": {
     "de": {
-      "rows": 255,
-      "injection": 70,
+      "rows": 252,
+      "injection": 67,
       "benign": 185
     },
     "en": {
-      "rows": 350,
-      "injection": 138,
+      "rows": 348,
+      "injection": 136,
       "benign": 212
     },
     "mixed": {
-      "rows": 42,
-      "injection": 42,
+      "rows": 41,
+      "injection": 41,
       "benign": 0
     },
     "other": {
-      "rows": 15,
-      "injection": 13,
+      "rows": 21,
+      "injection": 19,
       "benign": 2
     }
   }

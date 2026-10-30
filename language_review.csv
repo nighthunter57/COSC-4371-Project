@@ -113,7 +113,7 @@ deepset:test:99,deepset,de,rule,
 deepset:test:100,deepset,en,rule,
 deepset:test:101,deepset,en,rule,
 deepset:test:102,deepset,en,rule,
-deepset:test:103,deepset,de,rule,
+deepset:test:103,deepset,other,manual,German question with a Spanish injection
 deepset:test:104,deepset,mixed,rule,
 deepset:test:105,deepset,en,rule,
 deepset:test:106,deepset,mixed,rule,
@@ -123,7 +123,7 @@ deepset:test:109,deepset,mixed,rule,
 deepset:test:110,deepset,en,rule,
 deepset:test:111,deepset,en,rule,
 deepset:test:112,deepset,mixed,rule,
-deepset:test:113,deepset,de,rule,
+deepset:test:113,deepset,other,manual,German questions with a Spanish injection
 deepset:test:114,deepset,mixed,rule,
 deepset:test:115,deepset,mixed,rule,
 deepset:train:0,deepset,en,manual,short English prompt; rule unsure
@@ -563,7 +563,7 @@ deepset:train:433,deepset,other,manual,"single word, not English or German"
 deepset:train:434,deepset,en,rule,
 deepset:train:435,deepset,en,rule,
 deepset:train:436,deepset,en,rule,
-deepset:train:437,deepset,en,rule,
+deepset:train:437,deepset,other,manual,English jailbreak containing a Greek sentence
 deepset:train:438,deepset,de,rule,
 deepset:train:439,deepset,en,rule,
 deepset:train:440,deepset,en,rule,
@@ -631,7 +631,7 @@ deepset:train:501,deepset,mixed,rule,
 deepset:train:502,deepset,en,rule,
 deepset:train:503,deepset,de,rule,
 deepset:train:504,deepset,other,manual,German question with a Croatian injection
-deepset:train:505,deepset,en,rule,
+deepset:train:505,deepset,other,manual,English question with a Spanish injection
 deepset:train:506,deepset,mixed,manual,German keywords followed by English
 deepset:train:507,deepset,en,rule,
 deepset:train:508,deepset,en,rule,
@@ -670,8 +670,8 @@ deepset:train:540,deepset,mixed,rule,
 deepset:train:541,deepset,mixed,rule,
 deepset:train:542,deepset,en,rule,
 deepset:train:543,deepset,mixed,rule,
-deepset:train:544,deepset,de,rule,
-deepset:train:545,deepset,mixed,rule,
+deepset:train:544,deepset,other,manual,German questions with a Croatian injection
+deepset:train:545,deepset,other,manual,"English, German and Spanish in one prompt"
 gandalf:test:83,gandalf,other,manual,written in Russian
 gandalf:train:95,gandalf,de,manual,written in German
 gandalf:train:359,gandalf,de,manual,written in German

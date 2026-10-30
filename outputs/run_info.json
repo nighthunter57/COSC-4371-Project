@@ -38,8 +38,8 @@
     "n_features": 141544
   },
   "classifier": "LogisticRegression(class_weight='balanced', max_iter=5000, lbfgs)",
-  "fit_seconds_all_C": 7.2,
-  "total_seconds": 71.8,
+  "fit_seconds_all_C": 7.0,
+  "total_seconds": 72.1,
   "hardware": "arm64 CPU, macOS-26.7.1-arm64-arm-64bit-Mach-O",
   "python": "3.14.7",
   "packages": {
